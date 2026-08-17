@@ -1,0 +1,14 @@
+/**
+ * Calculates the total price after applying a discount.
+ * @param {number} price - Original price
+ * @param {number} discountPercent - Discount percentage (0-100)
+ * @returns {number} Final price after discount
+ */
+function calculateDiscountedPrice(price, discountPercent) {
+   (discountPercent < 0 || discountPercent > 100) {
+     new Error('Discount percent must be between 0 and 100');
+  }
+  return price - (price * discountPercent / 100);
+}
+
+module.exports = { calculateDiscountedPrice };
