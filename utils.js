@@ -11,4 +11,17 @@ function calculateDiscountedPrice(price, discountPercent) {
   return price - (price * discountPercent / 100);
 }
 
-module.exports = { calculateDiscountedPrice };
+/**
+ * Formats a number as currency.
+ * @param {number} amount - The amount to format
+ * @param {string} currencyCode - ISO currency code (e.g. 'USD', 'INR')
+ * @returns {string} Formatted currency string
+ */
+function formatCurrency(amount, currencyCode = 'USD') {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currencyCode
+  }).format(amount);
+}
+
+module.exports = { calculateDiscountedPrice, formatCurrency };
