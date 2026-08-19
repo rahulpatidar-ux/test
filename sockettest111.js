@@ -25,3 +25,4 @@ function formatCurrency(amount, currencyCode = 'USD') {
 }
 
 module.exports = { calculateDiscountedPrice, formatCurrency };
+<!-- DocuWriter test -->
